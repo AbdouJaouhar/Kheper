@@ -699,8 +699,8 @@ Preserve Gardiner codes, transliteration symbols, and Unicode identifiers lossle
 
 | Criterion | MVP beta target |
 | --- | --- |
-| Delayed recognition | At least 80% of beta learners identify 20 of 24 uniliterals 24 hours after completing the path. |
-| Delayed production | At least 70% produce an accepted form for 18 of 24 uniliterals seven days later without a visible guide. |
+| Delayed recognition | At least 80% of beta learners identify 20 of 24 uniliteral values 24 hours after completing the path in each taught script. |
+| Delayed production | At least 70% produce an accepted form for 18 of 24 uniliteral values seven days later without a visible guide, in both taught scripts. |
 | Direction | At least 90% correctly determine reading direction in the controlled final assessment. |
 | Contextual reading | At least 75% correctly transliterate or analyze four of five controlled words or groups using learned signs. |
 | False rejection | Fewer than 5% of specialist-approved, naturally varied drawings are rejected by the MVP scorer. |
@@ -710,6 +710,8 @@ Preserve Gardiner codes, transliteration symbols, and Unicode identifiers lossle
 ### 13.2 Local diagnostics and public quality evidence
 
 The production application emits no analytics or diagnostic events. Product quality is established through automated tests, public issue reports, specialist fixtures, and separately recruited studies rather than passive observation of learners.
+
+The evidence owners, collection methods, and release-gate rules are maintained in [release-success-scorecard.md](release-success-scorecard.md).
 
 | Evidence source | Privacy boundary |
 | --- | --- |
@@ -774,7 +776,7 @@ The MVP is releasable only when every item below is satisfied or explicitly remo
 
 All P0 functional requirements pass automated or documented manual acceptance tests.
 
-Orientation, 24 uniliterals, all MVP words, all lessons, and all assessment items have linguistic and calligraphic approval.
+Orientation, both forms of all 24 uniliteral values, all MVP words, all lessons, and all assessment items have linguistic and calligraphic approval.
 
 Every MVP sign has a canonical vector, construction sequence, accepted alternatives, anchors, tolerance profile, feedback mapping, accessibility text, source, and reviewer.
 
