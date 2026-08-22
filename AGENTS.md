@@ -59,7 +59,8 @@ Use **Kheper** as the product name and `KHEPER-xxx` as the ticket prefix. Existi
 - This repository is currently maintainer-only. Do not solicit, accept, or prepare external contributions unless the maintainer explicitly changes `CONTRIBUTING.md`.
 - Use short-lived branches named `feature/KHEPER-xxx-short-description`.
 - Agents may create branches and make focused local commits.
-- Agents must never merge any branch, including their own, into `main` or another branch. Do not push directly to `main`, create release tags, or publish artifacts.
+- Agents must not merge any branch by default. They may merge a named source branch into a named target branch only when the maintainer explicitly instructs that merge in the current conversation. Before merging, confirm the target, source, clean working tree, and review-ready status; report the resulting commit and do not push unless separately instructed.
+- Do not push directly to `main`, create release tags, or publish artifacts unless the maintainer explicitly instructs that specific action.
 - The maintainer alone decides when and whether a branch is merged.
 - Put the `KHEPER-xxx` key in commit messages and pull-request titles/descriptions.
 - Keep pull requests small and reviewable; include the ticket, behavioral summary, validation evidence, accessibility/privacy impact, and any content-review status.
