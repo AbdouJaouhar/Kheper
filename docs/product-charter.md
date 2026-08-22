@@ -99,6 +99,8 @@ The MVP is considered viable only when it meets the functional, privacy, accessi
 
 No draft prepared by an agent is scholarly approved merely because it is committed. The maintainer records approval and any later appointed specialist review in the relevant content and release records.
 
+The interim staffing model and RACI are maintained in [delivery-roles.md](delivery-roles.md).
+
 ## Change control
 
 Changes to the product promise, privacy model, licensing, MVP boundary, supported platforms, or scholarly-claim policy require:
