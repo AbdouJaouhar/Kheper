@@ -10,12 +10,13 @@ Before changing product behavior, content, architecture, or release material, re
 - `MVP_BACKLOG.md`
 - any relevant ADRs or documentation added to this repository
 
-Use **Kheper** as the product name and `KHEPER-xxx` as the ticket prefix. Existing ticket keys are authoritative; do not invent or renumber them.
+Use **Kheper** as the product name and `KHEPER-xxx` as the ticket prefix. Existing ticket keys and their Status values in `MVP_BACKLOG.md` are authoritative; do not invent or renumber them.
 
 ## Scope and authorization
 
-- Begin implementation only when the user explicitly selects a `KHEPER-xxx` ticket.
+- Begin implementation only when the maintainer explicitly selects a `KHEPER-xxx` ticket and marks it `Selected` in `MVP_BACKLOG.md`.
 - Keep each change scoped to that ticket. Explain and request approval before expanding scope.
+- Update an authorized ticket’s Status to `In progress`, `Blocked`, or `Ready for maintainer review` as appropriate. Only the maintainer may mark a ticket `Done`.
 - This is one Flutter/Dart monorepo. Follow the accepted architecture: local SQLite storage, packaged versioned content, deterministic vector drawing, and local backup/import.
 - Do not implement post-MVP features unless explicitly requested.
 - Preserve unrelated user changes. Never discard or overwrite them with Git reset, checkout, or a broad revert.

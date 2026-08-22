@@ -17,7 +17,7 @@ Security reports remain welcome through the private process in [SECURITY.md](SEC
 ## Planning and workflow
 
 - Product specification: `docs/product-spec.md`
-- MVP backlog: `MVP_BACKLOG.md`
+- MVP backlog and versioned ticket status: `MVP_BACKLOG.md`
 - Agent instructions: `AGENTS.md`
 - Architecture decisions: `docs/adr/README.md`
 
