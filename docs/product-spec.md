@@ -529,7 +529,7 @@ Maintain a public roadmap, issue tracker, contribution guide, code of conduct, s
 
 Produce source archives, checksums, software bills of materials, dependency-license reports, and reproducible build instructions for every tagged release.
 
-| SOURCE BASELINE Use Fischer's step-by-step calligraphy guide as a starting reference for pedagogical construction, Unicode/Unikemet for encoded identity and format controls, and specialist-reviewed teaching sources for linguistic sequencing. No single source is sufficient for every content field. |
+| SOURCE BASELINE Use Unicode/Unikemet data releases for encoded identity and format controls; use peer-reviewed Egyptology and TLA for cited scholarly verification; use only individually, explicitly licensed museum assets for authentic visual context. Fischer's calligraphy guide is a valuable reference-only source, not a source of redistributable text or drawings. Kheper's canonical vectors and recommended construction sequences are original, specialist-reviewed works. No single source is sufficient for every content field. |
 | --- |
 
 ## 10. Reference technical architecture
@@ -879,12 +879,14 @@ Illustrative schema only; values and terminology require specialist approval bef
 
 These sources establish the initial product constraints and content pipeline. Published lessons still require item-level scholarly sourcing and specialist review.
 
-S1 Ancient Egyptian Calligraphy: A Beginner's Guide to Writing Hieroglyphs. The Metropolitan Museum of Art. Step-by-step guidance for drawing a selected set of signs; baseline for reviewed pedagogical construction. Open S1 source
+S1 [Ancient Egyptian Calligraphy: A Beginner's Guide to Writing Hieroglyphs](https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/42144/). The Metropolitan Museum of Art. A serious, copyrighted reference for reviewed pedagogical construction; do not redistribute its text, scans, or drawings.
 
-S2 Cuneiform and Hieroglyphs, Unicode Standard, Chapter 11. Unicode Consortium. Encoded sign identity, directionality, rendering, and hieroglyph format-control context. Open S2 source
+S2 [Cuneiform and Hieroglyphs, Unicode Standard, Chapter 11](https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-11/). Unicode Consortium. Encoded sign identity, directionality, rendering, and hieroglyph format-control context. Reference the publication; use only separately licensed data files in packaged content.
 
-S3 Unicode Egyptian Hieroglyph Database (Unikemet). Unicode Consortium. Structured metadata and organization for encoded Egyptian hieroglyphs. Open S3 source
+S3 [Unicode Egyptian Hieroglyph Database (Unikemet)](https://www.unicode.org/reports/tr57/). Unicode Consortium. Structured metadata and organization for encoded Egyptian hieroglyphs. Record the pinned data-release version and `Unicode-3.0` licence when data is bundled.
 
-S4 Learn Hieroglyphs. Bibliotheca Alexandrina. Beginner progression across uniliterals, biliterals, triliterals, arrangement, direction, determinatives, and grammar. Open S4 source
+S4 [Thesaurus Linguae Aegyptiae](https://tla.digital/info/introduction?lang=en). Berlin-Brandenburg Academy of Sciences and Humanities and Saxon Academy of Sciences and Humanities. Scholarly corpus and lemma resource for verification; website material is reference-only unless a specific raw-data release has an explicit free licence.
 
-S5 Fabricius. Google Arts & Culture and project partners. Existing interactive work on learning, drawing, recognizing, and analyzing hieroglyphs; useful competitor and interaction reference. Open S5 source
+S5 [UCLA Encyclopedia of Egyptology](https://escholarship.org/uc/nelc_uee). Peer-reviewed scholarly reference. Cite individual articles and reuse their content only when the item itself states a compatible licence.
+
+S6 [The Met Open Access collection](https://www.metmuseum.org/art/collection/search/562008). Authentic visual context may use only individual objects carrying an explicit public-domain or compatible rights statement; retain object-level provenance and rights metadata.
