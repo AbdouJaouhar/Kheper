@@ -17,7 +17,7 @@ Delivery scope: Open-source, offline-only iOS and Android MVP with no user-data 
 
 ### Executive summary
 
-Kheper applies the short-session progression, immediate feedback, adaptive review, daily goals, and visible learning path associated with modern language-learning apps to Middle Egyptian written in monumental hieroglyphs. It begins with the 24 uniliteral signs, then introduces common words, sign grouping, biliterals, triliterals, determinatives, grammar, and authentic inscriptions.
+Kheper applies the short-session progression, immediate feedback, adaptive review, daily goals, and visible learning path associated with modern language-learning apps to Middle Egyptian written in monumental hieroglyphic and Hieratic forms. It begins with the 24 uniliteral values and their paired forms, then introduces common words, sign grouping, biliterals, triliterals, determinatives, grammar, and authentic inscriptions.
 
 The MVP is deliberately narrower: foundational orientation, the 24 uniliteral signs, approximately 30 high-frequency words, 40 short lessons, eight exercise families, a vector-based drawing evaluator, spaced review, a sign reference, and device-local progress. The complete course ships with the application and works indefinitely without connectivity. Code, content schemas, and releasable educational assets are published under documented open-source/open-content licenses and reviewed by specialists.
 
@@ -53,7 +53,7 @@ Kheper is a mobile learning application for beginners who want to read and repro
 | Decision | Specification |
 | --- | --- |
 | Language stage | Middle Egyptian is the initial linguistic target because it is the classical teaching stage and supports a coherent beginner curriculum. |
-| Script | Monumental hieroglyphic writing. Hieratic, Demotic, and Coptic are outside the initial course. |
+| Script | Monumental hieroglyphic and Hieratic writing are paired throughout the initial course. Demotic and Coptic are outside the initial course. |
 | Writing claim | Teach a recommended construction sequence reviewed by specialists. Never label it the single historically correct stroke order. |
 | First interface | English UI and explanations. Content architecture must support later French and Arabic localization. |
 | Platforms | One accessible cross-platform codebase producing native-quality iOS and Android applications, tested on low-end and older supported phones. |
@@ -89,7 +89,7 @@ A comprehensive dictionary of every encoded or historically attested sign.
 
 Teaching reconstructed spoken Egyptian as if its pronunciation were certain.
 
-Hieratic, Demotic, Coptic, temple-specific cryptographic writing, or Ptolemaic specialist variants.
+Demotic, Coptic, temple-specific cryptographic writing, or Ptolemaic specialist variants.
 
 Public user-generated lessons, social feeds, competitive leagues, or live tutoring.
 
@@ -195,7 +195,7 @@ The learner may manually mark a response as harder or easier, but cannot directl
 | Stage | Learning outcome | Release |
 | --- | --- | --- |
 | 0. Orientation | Distinguish language from script; understand sign functions, transliteration, quadrats, and reading direction. | MVP |
-| 1. Uniliterals | Recognize and construct the 24 one-consonant signs; read controlled beginner words. | MVP |
+| 1. Uniliterals | Recognize and construct monumental-hieroglyphic and Hieratic forms of the 24 one-consonant values; read controlled beginner words in both forms. | MVP |
 | 2. Building words | Use phonetic complements, common biliterals, and common word spellings. | V1 |
 | 3. Determinatives | Interpret semantic classifiers and distinguish words with similar consonantal spelling. | V1 |
 | 4. Core grammar | Read basic nominal patterns, gender/number, adjectives, pronouns, possession, and simple clauses. | V1 |
@@ -207,7 +207,7 @@ The learner may manually mark a response as harder or easier, but cannot directl
 
 Orientation: 4 lessons covering scripts and periods, sign functions, reading direction, sign grouping, and transliteration conventions.
 
-Uniliteral path: 6 units of four signs, each with introduction, construction practice, recognition, production, and contextual review.
+Uniliteral path: 6 units of four values, each with paired-script introduction, construction practice, recognition, production, correspondence matching, and contextual review.
 
 Consolidation: 6 mixed review lessons, 3 mastery checks, and one final foundational assessment.
 
@@ -359,7 +359,7 @@ The MVP uses deterministic vector and topology scoring. Machine learning may lat
 
 ### 7.2 Onboarding
 
-Explain that the first course teaches Middle Egyptian through monumental hieroglyphs.
+Explain that the first course teaches Middle Egyptian through paired monumental-hieroglyphic and Hieratic forms, and that the two scripts are related but visually distinct.
 
 Demonstrate that figures face toward the beginning of a line and that inscriptions may run in either direction.
 
@@ -750,9 +750,11 @@ The schedule assumes two full-time application engineers, one half-time product 
 
 ### 14.3 Release boundaries
 
+The detailed, testable classification and deferred-requirement guard are maintained in [mvp-scope.md](mvp-scope.md).
+
 | MVP | V1 | V2 |
 | --- | --- | --- |
-| Orientation; 24 uniliterals; ~30 words; ~40 lessons; eight exercise families; deterministic drawing feedback; review; goals/streak; complete offline operation; no account or telemetry; local backup; sign reference; English; public source. | Common biliterals and triliterals; determinatives; core grammar; 80-120 signs; richer readings; placement; focused review; French/Arabic; teacher progress export. | 200+ signs; authentic inscription lab; camera-assisted sign identification; advanced grammar and formulae; classroom management; specialist modules. |
+| Orientation; 24 uniliteral values in paired monumental-hieroglyphic and Hieratic forms; ~30 words; ~40 lessons; eight exercise families; deterministic drawing feedback; review; goals/streak; complete offline operation; no account or telemetry; local backup; paired-script sign reference; English; public source. | Common biliterals and triliterals; determinatives; core grammar; 80-120 signs; richer readings; placement; focused review; French/Arabic; teacher progress export. | 200+ signs; authentic inscription lab; camera-assisted sign identification; advanced grammar and formulae; classroom management; specialist modules. |
 
 ### 14.4 Principal risks
 

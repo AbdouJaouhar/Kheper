@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Kheper makes the foundations of reading and constructing Middle Egyptian monumental hieroglyphs accessible to complete beginners through short, progressive, evidence-based mobile lessons.
+Kheper makes the foundations of reading and constructing Middle Egyptian writing in monumental hieroglyphic and Hieratic forms accessible to complete beginners through short, progressive, evidence-based mobile lessons.
 
 It is designed to build durable recognition, recall, written production, and contextual reading skills without presenting scholarly conventions as historical certainties.
 
@@ -34,7 +34,7 @@ The application teaches a **reviewed recommended construction sequence**. It doe
 The MVP is a complete foundational course containing:
 
 - orientation to script, sign functions, reading direction, grouping, and transliteration;
-- all 24 uniliteral signs;
+- all 24 uniliteral values in paired monumental-hieroglyphic and reviewed Hieratic forms;
 - approximately 30 high-instructional-value words;
 - approximately 40 short lessons, six mixed reviews, three mastery checks, one final assessment, and at least ten controlled mini-readings;
 - eight exercise families, including trace, copy, draw from memory, recognition, typed recall, reading direction, and word building;
@@ -60,7 +60,7 @@ Kheper uses a deliberately narrow, auditable source stack. No source is treated 
 | Sign identity, encoded names, code points, format controls, and interchange metadata | [Unicode / Unikemet](https://www.unicode.org/reports/tr57/) | Package only data files whose release identifies the open `Unicode-3.0` licence; never extract glyph artwork from Unicode charts. |
 | Linguistic and historical claims | Peer-reviewed Egyptology, beginning with individual [UCLA Encyclopedia of Egyptology](https://escholarship.org/uc/nelc_uee) articles | Cite the specific article. Reuse text or images only if that individual item displays a compatible licence, such as CC BY. |
 | Lexical and authentic-text verification | [Thesaurus Linguae Aegyptiae](https://tla.digital/info/introduction?lang=en) (TLA) | Use as a cited verification source. Do not scrape or import website content or a sub-corpus; import raw data only after recording that release's explicit free licence. |
-| Pedagogical construction research | Henry George Fischer, *Ancient Egyptian Calligraphy: A Beginner's Guide to Writing Hieroglyphs* ([Met record](https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/42144/)) and other reviewed specialist sources | Reference-only unless the specific item grants reuse. Do not reproduce its text, scans, or drawings; Kheper's canonical vectors and construction sequences are original, reviewed works. |
+| Pedagogical construction research | Henry George Fischer, *Ancient Egyptian Calligraphy: A Beginner's Guide to Writing Hieroglyphs* ([Met record](https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/42144/)) for monumental forms, plus reviewed specialist sources for Hieratic forms | Reference-only unless the specific item grants reuse. Do not reproduce its text, scans, or drawings; Kheper's canonical vectors and construction sequences are original, reviewed works. |
 | Authentic visual context | Individual museum objects explicitly marked public-domain or otherwise compatibly licensed, beginning with [The Met Open Access collection](https://www.metmuseum.org/art/collection/search/562008) | Keep the object URL/number, holding institution, rights statement, title, dating, and provenance. Re-check rights before each release. |
 | Kheper learning assets | Original, reviewed Kheper text, vectors, animations, exercises, and accessibility descriptions | Publish under CC BY-SA 4.0 with source and reviewer metadata. |
 
@@ -71,7 +71,7 @@ Before an item can be included in a packaged course, its record must name the so
 - arbitrary photograph/inscription translation or camera recognition;
 - comprehensive catalogue search from freehand input;
 - accounts, social features, public user-generated lessons, leagues, live tutoring, or cloud services;
-- hieratic, Demotic, Coptic, Ptolemaic specialist writing, and full grammar instruction;
+- Demotic, Coptic, Ptolemaic specialist writing, and full grammar instruction;
 - generic English-to-hieroglyph conversion;
 - French and Arabic learner releases, reminders, placement diagnostics, and teacher/classroom features.
 
