@@ -750,6 +750,8 @@ The schedule assumes two full-time application engineers, one half-time product 
 
 ### 14.3 Release boundaries
 
+The detailed, testable classification and deferred-requirement guard are maintained in [mvp-scope.md](mvp-scope.md).
+
 | MVP | V1 | V2 |
 | --- | --- | --- |
 | Orientation; 24 uniliterals; ~30 words; ~40 lessons; eight exercise families; deterministic drawing feedback; review; goals/streak; complete offline operation; no account or telemetry; local backup; sign reference; English; public source. | Common biliterals and triliterals; determinatives; core grammar; 80-120 signs; richer readings; placement; focused review; French/Arabic; teacher progress export. | 200+ signs; authentic inscription lab; camera-assisted sign identification; advanced grammar and formulae; classroom management; specialist modules. |

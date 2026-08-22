@@ -89,7 +89,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | Key | Status | Type | Pri. | Summary | Acceptance criteria | Depends on |
 |---|---|---|---:|---|---|---|
 | KHEPER-001 | Done | Task | P0 | Ratify the product charter | Charter states target learners, problem, product promise, offline/open-source/privacy constraints, MVP outcome, and decision owners; sponsor and discipline leads approve it. | — |
-| KHEPER-002 | Selected | Task | P0 | Freeze MVP scope and exclusions | Every item in Sections 1.3, 1.4, and 14.3 of the specification is classified as MVP, later, or excluded; no P2 item appears on the MVP critical path. | KHEPER-001 |
+| KHEPER-002 | Ready for maintainer review | Task | P0 | Freeze MVP scope and exclusions | Every item in Sections 1.3, 1.4, and 14.3 of the specification is classified as MVP, later, or excluded; no P2 item appears on the MVP critical path. | KHEPER-001 |
 | KHEPER-003 | Not started | Task | P0 | Define measurable release success | Product, learning, drawing, privacy, accessibility, reliability, and performance thresholds are recorded with an evidence owner and collection method. | KHEPER-001 |
 | KHEPER-004 | Not started | Task | P0 | Establish delivery roles and RACI | Product, design, two app engineers, content/illustration, Egyptology, calligraphy, instructional design, QA, security/privacy, and release responsibilities have named owners and backups. | KHEPER-001 |
 | KHEPER-005 | Not started | Task | P0 | Publish milestones and dependency map | Phases 0–4, content critical path, drawing calibration path, design gates, alpha, beta, and release decision are represented in versioned project documentation with dependency links. | KHEPER-002, KHEPER-004 |
