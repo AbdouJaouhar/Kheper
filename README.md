@@ -6,7 +6,13 @@ The MVP teaches orientation, the 24 uniliteral signs, controlled vocabulary and 
 
 ## Project status
 
-The project is in **Phase 0 — Canon and prototype**. No application implementation has started. Work begins only when a `KHEPER-xxx` ticket is explicitly selected.
+The project is in **Phase 0 — Canon and prototype**. No application implementation has started. Work begins only when the maintainer explicitly selects a `KHEPER-xxx` ticket.
+
+## Contribution status
+
+Kheper is not accepting external contributions at this time, including pull requests, patches, course content, documentation, and assets. This is a temporary maintainer-only phase while the product canon and MVP foundation are established.
+
+Security reports remain welcome through the private process in [SECURITY.md](SECURITY.md).
 
 ## Planning and workflow
 
@@ -35,6 +41,6 @@ docs/         Architecture and contributor documentation
 
 Kheper is open source. The chosen licenses permit commercial use; contributors must not add non-commercial restrictions.
 
-## Contributing
+## Project policies
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md).

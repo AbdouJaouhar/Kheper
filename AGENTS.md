@@ -55,6 +55,7 @@ Use **Kheper** as the product name and `KHEPER-xxx` as the ticket prefix. Existi
 
 ## Git and GitHub workflow
 
+- This repository is currently maintainer-only. Do not solicit, accept, or prepare external contributions unless the maintainer explicitly changes `CONTRIBUTING.md`.
 - Use short-lived branches named `feature/KHEPER-xxx-short-description`.
 - Agents may create branches and make focused local commits. Do not push directly to `main`, merge branches, create release tags, or publish artifacts.
 - The maintainer alone decides when to merge to `main`.
