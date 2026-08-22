@@ -1,13 +1,13 @@
-# Kheper — Jira backlog from initiation to MVP release readiness
+# Kheper — MVP delivery backlog
 
 **Document status:** Planning draft
-**Source of truth:** `hieroglyph_learning_app_specification.docx` (Draft v0.2, 22 August 2026)
+**Source of truth:** `docs/product-spec.md` (Draft v0.2, migrated 22 August 2026)
 **Scope:** Planning only. This file defines work; it does not authorize or contain implementation.
 **Target:** An open-source, offline-only iOS and Android MVP that teaches the 24 Middle Egyptian uniliteral signs.
 
 ## 1. How to use this backlog
 
-The identifiers below are proposed Jira keys for import or manual creation. Epics use `KHEPER-EPxx`; child issues use `KHEPER-xxx`. Estimates are intentionally omitted until the delivery team refines the tickets. A ticket may be split during refinement, but its acceptance criteria must remain covered.
+The identifiers below are proposed versioned ticket keys. Epics use `KHEPER-EPxx`; child issues use `KHEPER-xxx`. Estimates are intentionally omitted until the delivery team refines the tickets. A ticket may be split during refinement, but its acceptance criteria must remain covered.
 
 ### Issue types
 
@@ -54,7 +54,7 @@ An issue may enter active delivery only when:
 
 Unless a ticket narrows the requirement, delivery work is done only when:
 
-- its acceptance criteria pass and evidence is linked in Jira;
+- its acceptance criteria pass and evidence is linked in the relevant branch, pull request, or release record;
 - applicable automated tests and documented manual checks pass;
 - it works with airplane mode enabled and introduces no runtime network dependency;
 - accessibility labels, reduced-motion behavior, dynamic text, contrast, and non-drawing alternatives are covered where relevant;
@@ -79,7 +79,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | KHEPER-002 | Task | P0 | Freeze MVP scope and exclusions | Every item in Sections 1.3, 1.4, and 14.3 of the specification is classified as MVP, later, or excluded; no P2 item appears on the MVP critical path. | KHEPER-001 |
 | KHEPER-003 | Task | P0 | Define measurable release success | Product, learning, drawing, privacy, accessibility, reliability, and performance thresholds are recorded with an evidence owner and collection method. | KHEPER-001 |
 | KHEPER-004 | Task | P0 | Establish delivery roles and RACI | Product, design, two app engineers, content/illustration, Egyptology, calligraphy, instructional design, QA, security/privacy, and release responsibilities have named owners and backups. | KHEPER-001 |
-| KHEPER-005 | Task | P0 | Publish milestones and dependency map | Phases 0–4, content critical path, drawing calibration path, design gates, alpha, beta, and release decision are represented in Jira with dependency links. | KHEPER-002, KHEPER-004 |
+| KHEPER-005 | Task | P0 | Publish milestones and dependency map | Phases 0–4, content critical path, drawing calibration path, design gates, alpha, beta, and release decision are represented in versioned project documentation with dependency links. | KHEPER-002, KHEPER-004 |
 | KHEPER-006 | Task | P0 | Agree Definition of Ready and Done | Team approves the criteria in this document, including required evidence, review roles, and exception process. | KHEPER-004 |
 | KHEPER-007 | Task | P0 | Create risk and decision registers | Principal risks from the specification have owner, probability, impact, trigger, mitigation, and review date; decisions use durable ADR/product-decision records. | KHEPER-002 |
 | KHEPER-008 | Task | P1 | Define defect severity and release-blocker policy | Severity levels cover learning harm, scholarly inaccuracy, data loss, privacy/network violations, accessibility blockers, scoring errors, crashes, and visual defects; release-blocker authority is named. | KHEPER-003 |

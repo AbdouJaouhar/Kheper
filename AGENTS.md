@@ -6,8 +6,8 @@ Kheper is an open-source, offline-only iOS and Android learning application for 
 
 Before changing product behavior, content, architecture, or release material, read:
 
-- `hieroglyph_learning_app_specification.docx`
-- `JIRA_MVP_BACKLOG.md`
+- `docs/product-spec.md`
+- `MVP_BACKLOG.md`
 - any relevant ADRs or documentation added to this repository
 
 Use **Kheper** as the product name and `KHEPER-xxx` as the ticket prefix. Existing ticket keys are authoritative; do not invent or renumber them.

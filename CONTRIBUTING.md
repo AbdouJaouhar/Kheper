@@ -2,9 +2,9 @@
 
 ## Before starting
 
-1. Read `AGENTS.md`, the product specification, and the relevant `KHEPER-xxx` backlog ticket.
+1. Read `AGENTS.md`, `docs/product-spec.md`, and the relevant `KHEPER-xxx` ticket in `MVP_BACKLOG.md`.
 2. Confirm that the maintainer has explicitly selected the ticket.
-3. Check `planning/tickets/` for its current status and decisions.
+3. Keep the selected ticket key in the branch name, commits, and pull request.
 
 ## Branches and commits
 
