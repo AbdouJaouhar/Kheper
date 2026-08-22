@@ -35,6 +35,10 @@ The **Status** column is the versioned record of execution state. Git history re
 
 Only the maintainer may mark a ticket **Selected** or **Done**. Agents may update an authorized ticket between **In progress**, **Blocked**, and **Ready for maintainer review**, with a commit or pull-request reference.
 
+### Fast-start decision
+
+KHEPER-005 through KHEPER-035 remain planned and **Not started**, but do not block the initial Flutter application foundation. KHEPER-036 may begin after KHEPER-002 and KHEPER-004; deferred planning work must be completed before the later feature, content, quality, and release gates that depend on it.
+
 ### Delivery phases
 
 | Phase | Indicative duration | Exit outcome |
@@ -91,7 +95,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | KHEPER-001 | Done | Task | P0 | Ratify the product charter | Charter states target learners, problem, product promise, offline/open-source/privacy constraints, MVP outcome, and decision owners; sponsor and discipline leads approve it. | — |
 | KHEPER-002 | Done | Task | P0 | Freeze MVP scope and exclusions | Every item in Sections 1.3, 1.4, and 14.3 of the specification is classified as MVP, later, or excluded; no P2 item appears on the MVP critical path. | KHEPER-001 |
 | KHEPER-003 | Done | Task | P0 | Define measurable release success | Product, learning, drawing, privacy, accessibility, reliability, and performance thresholds are recorded with an evidence owner and collection method. | KHEPER-001 |
-| KHEPER-004 | Selected | Task | P0 | Establish delivery roles and RACI | Product, design, two app engineers, content/illustration, Egyptology, calligraphy, instructional design, QA, security/privacy, and release responsibilities have named owners and backups. | KHEPER-001 |
+| KHEPER-004 | Done | Task | P0 | Establish delivery roles and RACI | Product, design, two app engineers, content/illustration, Egyptology, calligraphy, instructional design, QA, security/privacy, and release responsibilities have named owners and backups. | KHEPER-001 |
 | KHEPER-005 | Not started | Task | P0 | Publish milestones and dependency map | Phases 0–4, content critical path, drawing calibration path, design gates, alpha, beta, and release decision are represented in versioned project documentation with dependency links. | KHEPER-002, KHEPER-004 |
 | KHEPER-006 | Not started | Task | P0 | Agree Definition of Ready and Done | Team approves the criteria in this document, including required evidence, review roles, and exception process. | KHEPER-004 |
 | KHEPER-007 | Not started | Task | P0 | Create risk and decision registers | Principal risks from the specification have owner, probability, impact, trigger, mitigation, and review date; decisions use durable ADR/product-decision records. | KHEPER-002 |
@@ -150,7 +154,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | KHEPER-033 | Not started | Spike | P0 | Validate the reference technical stack | A time-boxed Flutter/Dart, vector canvas, SQLite, signed-bundle, and browser-authoring assessment proves or revises the stack against performance, accessibility, offline, licensing, and staffing constraints; decision is recorded. | KHEPER-019, KHEPER-032 |
 | KHEPER-034 | Not started | Task | P0 | Record architecture and privacy-boundary decisions | ADRs define module boundaries, absence of learner-feature networking, local storage, content loading, scoring, backup/import, localization, testing, and version ownership. | KHEPER-033 |
 | KHEPER-035 | Not started | Task | P0 | Establish the public repository baseline | MPL-2.0 license, README, contribution guide, code of conduct, security reporting, DCO/signed-commit policy, issue templates, decision-record structure, and public roadmap are present and reviewed. | KHEPER-017, KHEPER-034 |
-| KHEPER-036 | Not started | Task | P0 | Create cross-platform application foundation | A minimal iOS/Android application builds from one codebase on supported toolchains and displays embedded content without runtime connectivity. | KHEPER-034 |
+| KHEPER-036 | Selected | Task | P0 | Create cross-platform application foundation | A minimal iOS/Android application builds from one codebase on supported toolchains and displays embedded content without runtime connectivity. | KHEPER-002, KHEPER-004 |
 | KHEPER-037 | Not started | Task | P0 | Configure locked dependency management | Dependencies are pinned; license and vulnerability policies reject forbidden SDKs and incompatible licenses; update ownership is documented. | KHEPER-035, KHEPER-036 |
 | KHEPER-038 | Not started | Task | P0 | Establish continuous integration | Formatting, static analysis, unit, schema, content, accessibility smoke, dependency, license, and build checks run for changes and protected release branches. | KHEPER-036, KHEPER-037 |
 | KHEPER-039 | Not started | Task | P0 | Define automated and manual test strategy | Test pyramid, fixtures, golden tests, end-to-end flows, device matrix, offline inspection, packet capture, performance harness, accessibility checks, and evidence retention are documented. | KHEPER-003, KHEPER-034 |

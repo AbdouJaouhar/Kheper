@@ -2,7 +2,7 @@
 
 ## Product and source documents
 
-Kheper is an open-source, offline-only iOS and Android learning application for reading and constructing Middle Egyptian hieroglyphs.
+Kheper is an open-source, offline-only iOS and Android learning application for reading and constructing Middle Egyptian monumental-hieroglyphic and Hieratic forms.
 
 Before changing product behavior, content, architecture, or release material, read:
 
