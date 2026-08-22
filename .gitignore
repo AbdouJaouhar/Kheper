@@ -24,15 +24,15 @@ build/
 coverage/
 
 # Android
-android/.gradle/
-android/local.properties
+**/android/.gradle/
+**/android/local.properties
 
 # iOS and macOS generated files
-ios/Pods/
-ios/.symlinks/
-ios/Flutter/ephemeral/
-ios/Flutter/Generated.xcconfig
-ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
 macos/Flutter/ephemeral/
 macos/Flutter/GeneratedPluginRegistrant.swift
 
