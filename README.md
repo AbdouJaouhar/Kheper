@@ -1,8 +1,8 @@
 # Kheper
 
-Kheper is an open-source, offline-only mobile course for learning to read and construct Middle Egyptian hieroglyphs.
+Kheper is an open-source, offline-only mobile course for learning to read and construct Middle Egyptian monumental hieroglyphic and Hieratic forms.
 
-The MVP teaches orientation, the 24 uniliteral signs, controlled vocabulary and readings, guided sign construction, spaced review, a sign reference, and device-local progress. It has no accounts, backend, telemetry, advertising, or runtime network dependency.
+The MVP teaches orientation, the 24 uniliteral values in both scripts, controlled vocabulary and readings, guided sign construction, spaced review, a paired-script sign reference, and device-local progress. It has no accounts, backend, telemetry, advertising, or runtime network dependency.
 
 ## Project status
 

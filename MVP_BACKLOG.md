@@ -3,7 +3,7 @@
 **Document status:** Planning draft
 **Source of truth:** `docs/product-spec.md` (Draft v0.2, migrated 22 August 2026)
 **Scope:** Planning only. This file defines work; it does not authorize or contain implementation.
-**Target:** An open-source, offline-only iOS and Android MVP that teaches the 24 Middle Egyptian uniliteral signs.
+**Target:** An open-source, offline-only iOS and Android MVP that teaches the 24 Middle Egyptian uniliteral values in monumental hieroglyphic and Hieratic forms.
 
 ## 1. How to use this backlog
 
@@ -106,7 +106,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 
 | Key | Status | Type | Pri. | Summary | Acceptance criteria | Depends on |
 |---|---|---|---:|---|---|---|
-| KHEPER-010 | Not started | Task | P0 | Approve linguistic and notation policy | Middle Egyptian scope, monumental script, transliteration scheme, keyboard fallback, pronunciation disclaimer, Gardiner-code use, direction, grouping, variants, and translation layers are documented and approved by the lead Egyptologist. | KHEPER-001 |
+| KHEPER-010 | Not started | Task | P0 | Approve linguistic and notation policy | Middle Egyptian scope, monumental-hieroglyphic and Hieratic forms, transliteration scheme, keyboard fallback, pronunciation disclaimer, Gardiner-code use, direction, grouping, script relationships, variants, and translation layers are documented and approved by the lead Egyptologist. | KHEPER-001 |
 | KHEPER-011 | Not started | Task | P0 | Approve pedagogical construction policy | Policy consistently says “recommended construction sequence,” defines when alternatives are accepted, and prohibits claims of universal historical stroke order. | KHEPER-010 |
 | KHEPER-012 | Not started | Task | P0 | Define mastery evidence policy | Recognition, phonetic/semantic recall, written production, and contextual use mappings are approved for every MVP exercise family; XP cannot count as mastery. | KHEPER-010 |
 | KHEPER-013 | Not started | Task | P0 | Define content sourcing standard | Required source types, item-level citations, confidence labels, chronology, authentic-example rules, and unacceptable sources are documented. | KHEPER-010 |
