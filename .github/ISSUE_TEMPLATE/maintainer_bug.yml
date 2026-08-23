@@ -1,0 +1,56 @@
+name: Maintainer defect
+description: Record a defect against an authorized Kheper ticket during the maintainer-only phase.
+title: "[KHEPER-xxx] Defect: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include learner data, secrets, signing material, or undisclosed vulnerabilities. Use the private security route for security-sensitive reports.
+  - type: input
+    id: ticket
+    attributes:
+      label: Related ticket
+      placeholder: KHEPER-xxx
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction and environment
+      description: Include revision, app/content version, OS/device, inputs, and minimal safe steps.
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Primary impact
+      options:
+        - Learning or scholarly accuracy
+        - Data loss, backup, restore, or rollback
+        - Privacy, security, or outbound networking
+        - Accessibility
+        - Drawing or scoring
+        - Crash or reliability
+        - Performance
+        - Visual or documentation
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Safe evidence
+      description: Link non-sensitive logs, screenshots, fixtures, or tests. Do not paste secrets or learner data.

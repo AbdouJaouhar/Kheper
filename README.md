@@ -6,7 +6,12 @@ The MVP teaches orientation, the 24 uniliteral values in both scripts, controlle
 
 ## Project status
 
-The project is in **Phase 0 — Canon and prototype**. The minimal Flutter application foundation is being established on the `KHEPER-036` ticket branch; it has not yet been accepted into `main`. Work begins only when the maintainer explicitly selects a `KHEPER-xxx` ticket.
+The project is in **Phase 0 — Canon and prototype**. The Ubuntu Flutter
+development foundation from `KHEPER-036` is available on `main`, including the
+hot-reload preview. The current implementation-first sequence is
+`KHEPER-035` → `KHEPER-037` → `KHEPER-038`; deferred planning work still gates
+the later milestones that depend on it. Work begins only when the maintainer
+explicitly selects a `KHEPER-xxx` ticket.
 
 ## Development preview
 
@@ -29,6 +34,7 @@ Security reports remain welcome through the private process in [SECURITY.md](SEC
 
 ## Planning and workflow
 
+- Public roadmap: `ROADMAP.md`
 - Product specification: `docs/product-spec.md`
 - MVP scope register: `docs/mvp-scope.md`
 - MVP release-success scorecard: `docs/release-success-scorecard.md`
@@ -39,8 +45,12 @@ Security reports remain welcome through the private process in [SECURITY.md](SEC
 - MVP backlog and versioned ticket status: `MVP_BACKLOG.md`
 - Agent instructions: `AGENTS.md`
 - Architecture decisions: `docs/adr/README.md`
+- Commit certification and signature policy: `docs/commit-policy.md`
 
-Create short-lived branches using `feature/KHEPER-xxx-short-description`. The maintainer alone decides when work is merged into `main`.
+Create short-lived branches using `feature/KHEPER-xxx-short-description` and
+include the ticket key in commits and pull requests. The maintainer alone
+decides when work is merged into `main`. Commit certification and signature
+requirements are documented in [docs/commit-policy.md](docs/commit-policy.md).
 
 ## Planned monorepo layout
 

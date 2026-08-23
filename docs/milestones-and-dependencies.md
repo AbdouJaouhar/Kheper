@@ -144,6 +144,18 @@ evidence is not a pass.
 
 ## Schedule control rules
 
+### Maintainer-approved implementation fast track
+
+On 23 August 2026, the maintainer selected the sequence `KHEPER-035` →
+`KHEPER-037` → `KHEPER-038` following completion of the Ubuntu application
+foundation in `KHEPER-036`. This sequence prioritizes a reviewable repository,
+locked dependencies, and continuous integration so Flutter feature delivery can
+resume quickly. Planning tickets `KHEPER-007`–`KHEPER-034` remain deferred
+unless they become a direct dependency of selected work or are required to
+close a named phase or release gate. This is sequencing authority only: it does
+not mark deferred work complete or waive any product, scholarly, accessibility,
+offline/privacy, licensing, design, quality, or release gate.
+
 - Review this map when a dependency, phase boundary, critical-path ticket, or
   release gate changes; update the backlog in the same approved change.
 - Report progress from completed gate evidence, not elapsed indicative weeks.

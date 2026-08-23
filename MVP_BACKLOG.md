@@ -37,7 +37,18 @@ Only the maintainer may mark a ticket **Selected** or **Done**. Agents may updat
 
 ### Fast-start decision
 
-KHEPER-005 through KHEPER-035 remain planned and **Not started**, but do not block the initial Flutter application foundation. KHEPER-036 may begin after KHEPER-002 and KHEPER-004; deferred planning work must be completed before the later feature, content, quality, and release gates that depend on it.
+The original fast-start decision allowed `KHEPER-036` to begin after
+`KHEPER-002` and `KHEPER-004` while `KHEPER-005` through `KHEPER-035` remained
+planned. Deferred work must still be completed before the later feature,
+content, quality, and release gates that depend on it.
+
+On 23 August 2026, the maintainer approved an implementation-first continuation
+after `KHEPER-036`: deliver `KHEPER-035`, then `KHEPER-037`, then `KHEPER-038`
+to establish the public repository baseline, locked dependencies, and CI before
+resuming Flutter feature work. `KHEPER-007` through `KHEPER-034` remain deferred
+unless a selected implementation ticket depends on them directly or a named
+phase/release gate requires them. Deferral does not waive their acceptance
+criteria or permit dependent gates to close early.
 
 ### Delivery phases
 
@@ -159,7 +170,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 |---|---|---|---:|---|---|---|
 | KHEPER-033 | Not started | Spike | P0 | Validate the reference technical stack | A time-boxed Flutter/Dart, vector canvas, SQLite, signed-bundle, and browser-authoring assessment proves or revises the stack against performance, accessibility, offline, licensing, and staffing constraints; decision is recorded. | KHEPER-019, KHEPER-032 |
 | KHEPER-034 | Not started | Task | P0 | Record architecture and privacy-boundary decisions | ADRs define module boundaries, absence of learner-feature networking, local storage, content loading, scoring, backup/import, localization, testing, and version ownership. | KHEPER-033 |
-| KHEPER-035 | Not started | Task | P0 | Establish the public repository baseline | MPL-2.0 license, README, contribution guide, code of conduct, security reporting, DCO/signed-commit policy, issue templates, decision-record structure, and public roadmap are present and reviewed. | KHEPER-017, KHEPER-034 |
+| KHEPER-035 | Done | Task | P0 | Establish the public repository baseline | MPL-2.0 license, README, contribution guide, code of conduct, security reporting, DCO/signed-commit policy, issue templates, decision-record structure, and public roadmap are present and reviewed. | KHEPER-017, KHEPER-034 |
 | KHEPER-036 | Done | Task | P0 | Create cross-platform application foundation | A stable Ubuntu development preview launches from one command, displays embedded content without runtime connectivity, and supports repeatable Flutter hot reload without restarting the process. The same Flutter codebase retains generated iOS/Android runners; their platform builds are validated after the Ubuntu foundation stabilizes. | KHEPER-002, KHEPER-004 |
 | KHEPER-037 | Not started | Task | P0 | Configure locked dependency management | Dependencies are pinned; license and vulnerability policies reject forbidden SDKs and incompatible licenses; update ownership is documented. | KHEPER-035, KHEPER-036 |
 | KHEPER-038 | Not started | Task | P0 | Establish continuous integration | Formatting, static analysis, unit, schema, content, accessibility smoke, dependency, license, and build checks run for changes and protected release branches. | KHEPER-036, KHEPER-037 |

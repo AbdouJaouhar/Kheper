@@ -4,6 +4,10 @@ Record durable architectural, product-boundary, security, data-format, and relea
 
 Use one file per decision: `NNNN-short-title.md`.
 
+Copy [`0000-template.md`](0000-template.md) when creating an ADR. Replace
+`0000` with the next unused four-digit sequence and keep the related
+`KHEPER-xxx` ticket explicit.
+
 Each ADR must include:
 
 - context and the decision to make;
