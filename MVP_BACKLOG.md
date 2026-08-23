@@ -57,6 +57,9 @@ The MVP excludes accounts, backend services, telemetry, advertising, runtime net
 
 ## 3. Global Definition of Ready
 
+The operational evidence, review, decision, and exception rules are maintained
+in [`docs/definition-of-ready-and-done.md`](docs/definition-of-ready-and-done.md).
+
 An issue may enter active delivery only when:
 
 - its intended user or operational outcome is explicit;
@@ -68,6 +71,9 @@ An issue may enter active delivery only when:
 - the responsible discipline and required reviewers are assigned.
 
 ## 4. Global Definition of Done
+
+The operational evidence, review, decision, and exception rules are maintained
+in [`docs/definition-of-ready-and-done.md`](docs/definition-of-ready-and-done.md).
 
 Unless a ticket narrows the requirement, delivery work is done only when:
 
@@ -97,7 +103,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | KHEPER-003 | Done | Task | P0 | Define measurable release success | Product, learning, drawing, privacy, accessibility, reliability, and performance thresholds are recorded with an evidence owner and collection method. | KHEPER-001 |
 | KHEPER-004 | Done | Task | P0 | Establish delivery roles and RACI | Product, design, two app engineers, content/illustration, Egyptology, calligraphy, instructional design, QA, security/privacy, and release responsibilities have named owners and backups. | KHEPER-001 |
 | KHEPER-005 | Done | Task | P0 | Publish milestones and dependency map | Phases 0–4, content critical path, drawing calibration path, design gates, alpha, beta, and release decision are represented in versioned project documentation with dependency links. | KHEPER-002, KHEPER-004 |
-| KHEPER-006 | Not started | Task | P0 | Agree Definition of Ready and Done | Team approves the criteria in this document, including required evidence, review roles, and exception process. | KHEPER-004 |
+| KHEPER-006 | Done | Task | P0 | Agree Definition of Ready and Done | Team approves the criteria in this document, including required evidence, review roles, and exception process. | KHEPER-004 |
 | KHEPER-007 | Not started | Task | P0 | Create risk and decision registers | Principal risks from the specification have owner, probability, impact, trigger, mitigation, and review date; decisions use durable ADR/product-decision records. | KHEPER-002 |
 | KHEPER-008 | Not started | Task | P1 | Define defect severity and release-blocker policy | Severity levels cover learning harm, scholarly inaccuracy, data loss, privacy/network violations, accessibility blockers, scoring errors, crashes, and visual defects; release-blocker authority is named. | KHEPER-003 |
 | KHEPER-009 | Not started | Task | P0 | Run MVP kickoff and baseline review | All leads review the specification, backlog, risks, assumptions, milestones, and scope-change process; unresolved items have owners and dates. | KHEPER-002–KHEPER-008 |
