@@ -54,3 +54,15 @@ flutter build ios --debug
 
 The iOS command must run on macOS with Xcode installed. The application does
 not request Android network permissions in release, debug, or profile builds.
+
+## Application shell and localization fixtures
+
+The shell exposes five destinations: Learn, Review, Signs, Read, and Settings.
+It uses bottom navigation on narrow layouts and a navigation rail from 700
+logical pixels wide.
+
+All shell copy is provided through the typed `AppCopy` object. English is the
+only active product copy. The French-expansion and Arabic RTL values are layout
+test fixtures, not reviewed or released translations. Tests inject UI text
+direction separately from inscription direction; do not derive one from the
+other or from glyph orientation.

@@ -50,6 +50,14 @@ unless a selected implementation ticket depends on them directly or a named
 phase/release gate requires them. Deferral does not waive their acceptance
 criteria or permit dependent gates to close early.
 
+For an implementation ticket selected under this fast track, the maintainer may
+remove a broad planning-ticket prerequisite when the implementation ticket
+directly specifies and verifies every constraint it needs. The deferred ticket
+remains `Not started` and still gates its own complete system or later phase and
+release evidence. `KHEPER-043` applies this rule to `KHEPER-030`: the shell
+tests its immediate responsive, accessibility, expansion, and direction needs,
+while the full accessible design system remains deferred.
+
 ### Delivery phases
 
 | Phase | Indicative duration | Exit outcome |
@@ -178,7 +186,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | KHEPER-040 | Not started | Task | P0 | Configure supported platform matrix | iOS 15+, Android 8/API 26+, 2 GB RAM Android, 320 logical-pixel width, phone/tablet, finger/stylus, and older supported devices are represented in CI or manual labs. | KHEPER-039 |
 | KHEPER-041 | Not started | Task | P0 | Establish reproducible build pipeline | Clean documented environments produce installable iOS and Android artifacts from a tagged revision with locked inputs, checksums, source archive, dependency report, and SBOM. | KHEPER-037, KHEPER-038 |
 | KHEPER-042 | Not started | Task | P0 | Create versioning and migration policy | App, content schema, curriculum, scoring algorithm, construction profile, database, and backup versions have compatibility, migration, rollback, and deprecation rules. | KHEPER-034 |
-| KHEPER-043 | Not started | Task | P0 | Add localization-ready application shell | All initial UI strings resolve through localization keys; layout separates UI direction from inscription direction and survives representative French/Arabic expansion fixtures. | KHEPER-030, KHEPER-036 |
+| KHEPER-043 | Done | Task | P0 | Add localization-ready application shell | All initial UI strings resolve through localization keys; layout separates UI direction from inscription direction and survives representative French/Arabic expansion fixtures. | KHEPER-036 |
 
 ## EP05 — Versioned content and authoring system
 
