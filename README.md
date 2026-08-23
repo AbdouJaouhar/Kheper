@@ -6,7 +6,20 @@ The MVP teaches orientation, the 24 uniliteral values in both scripts, controlle
 
 ## Project status
 
-The project is in **Phase 0 — Canon and prototype**. No application implementation has started. Work begins only when the maintainer explicitly selects a `KHEPER-xxx` ticket.
+The project is in **Phase 0 — Canon and prototype**. The minimal Flutter application foundation is being established on the `KHEPER-036` ticket branch; it has not yet been accepted into `main`. Work begins only when the maintainer explicitly selects a `KHEPER-xxx` ticket.
+
+## Development preview
+
+After installing Flutter, run these commands from the repository root:
+
+```sh
+make setup
+make preview
+```
+
+The Linux preview uses the iPhone 14 Pro Max 430 × 932 logical portrait size
+for rapid layout work. While it runs, press `r` in the terminal to hot reload
+Dart changes without restarting the app.
 
 ## Contribution status
 
