@@ -58,6 +58,12 @@ release evidence. `KHEPER-043` applies this rule to `KHEPER-030`: the shell
 tests its immediate responsive, accessibility, expansion, and direction needs,
 while the full accessible design system remains deferred.
 
+`KHEPER-044` applies the same rule to `KHEPER-018` and `KHEPER-042`: its typed
+contract directly represents provenance, review state, stable references, and
+independent schema/content versions. Structural fixtures contain no scholarly
+claims. The reviewed five-sign prototypes and the complete migration policy
+remain separate release gates and may still require compatible schema evolution.
+
 ### Delivery phases
 
 | Phase | Indicative duration | Exit outcome |
@@ -196,7 +202,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 
 | Key | Status | Type | Pri. | Summary | Acceptance criteria | Depends on |
 |---|---|---|---:|---|---|---|
-| KHEPER-044 | Not started | Task | P0 | Define versioned content schemas | Typed schemas cover course, unit, lesson, glyph, lexeme, reading, exercise, source, asset, review, construction, tolerance, feedback, localization, and manifest records with stable IDs. | KHEPER-018, KHEPER-042 |
+| KHEPER-044 | Done | Task | P0 | Define versioned content schemas | Typed schemas cover course, unit, lesson, glyph, lexeme, reading, exercise, source, asset, review, construction, tolerance, feedback, localization, and manifest records with stable IDs. | KHEPER-036 |
 | KHEPER-045 | Not started | Task | P0 | Define content-bundle manifest and signature contract | Schema/curriculum versions, checksums, assets, approvals, signature, channel, rollback parent, and compatibility are specified with valid and invalid examples. | KHEPER-042, KHEPER-044 |
 | KHEPER-046 | Not started | Task | P0 | Build automated content validation | Validation covers unique IDs/codes, Unicode, paths, accepted sequences, answers, distractors, references, sources, approvals, localization, accessibility alternatives, checksums, and signature; failures block production bundles. | KHEPER-044, KHEPER-045 |
 | KHEPER-047 | Not started | Task | P0 | Build structured authoring workflow | Authors can create/revise records with stable IDs, sources, changelog, confidence, and explicit review states; permissions enforce the editorial lifecycle. | KHEPER-014, KHEPER-044 |
