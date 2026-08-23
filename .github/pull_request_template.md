@@ -15,6 +15,7 @@ Describe the user-visible or operational result.
 - [ ] Content review/source status recorded when applicable
 - [ ] Dependency/license impact recorded when applicable
 - [ ] `make dependencies` passed when the dependency graph or policy changed
+- [ ] Required Ubuntu CI checks passed or an approved exception is linked
 
 ## Notes for maintainer
 
