@@ -21,6 +21,11 @@ implicitly complete. Android and iOS toolchain/device validation is deferred
 until the Ubuntu version stabilizes and remains required at the named mobile,
 alpha, and release gates.
 
+Selected feature tickets may absorb and directly test the narrow constraints
+they need instead of waiting for an entire broad planning ticket. The
+maintainer records any dependency change in the backlog; the deferred ticket
+remains incomplete and still gates its full system and later release evidence.
+
 ## MVP milestones
 
 | Phase | Outcome |
