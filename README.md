@@ -46,6 +46,7 @@ Security reports remain welcome through the private process in [SECURITY.md](SEC
 - Agent instructions: `AGENTS.md`
 - Architecture decisions: `docs/adr/README.md`
 - Commit certification and signature policy: `docs/commit-policy.md`
+- Dependency policy and inventory: `docs/dependency-policy.md`
 
 Create short-lived branches using `feature/KHEPER-xxx-short-description` and
 include the ticket key in commits and pull requests. The maintainer alone
