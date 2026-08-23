@@ -66,3 +66,16 @@ only active product copy. The French-expansion and Arabic RTL values are layout
 test fixtures, not reviewed or released translations. Tests inject UI text
 direction separately from inscription direction; do not derive one from the
 other or from glyph orientation.
+
+## Versioned content contract
+
+`lib/content/content_models.dart` defines the dependency-free v1 content
+contract used by the future packaged course loader. It provides stable,
+namespaced IDs and typed JSON records for courses, units, lessons, glyphs,
+lexemes, readings, exercises, sources, assets, reviews, construction profiles,
+tolerances, feedback, localization, and manifests.
+
+The current test records are structural fixtures only. They contain no approved
+Egyptological claims, translations, drawing sequences, or redistributable
+third-party material. Full cross-record and scholarly publication validation is
+owned by KHEPER-046.
