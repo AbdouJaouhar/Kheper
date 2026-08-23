@@ -17,6 +17,34 @@ flutter analyze
 flutter test
 ```
 
+## Linux layout preview
+
+The local Linux runner opens as a fixed 430 × 932 portrait window, using the
+iPhone 14 Pro Max logical display size and 19.5:9 aspect ratio. Desktop window
+chrome can slightly reduce the Flutter content area, so this is a quick layout
+preview rather than a pixel-exact iOS simulator.
+
+From the repository root, first fetch packages once:
+
+```sh
+make setup
+```
+
+Then launch the preview:
+
+```sh
+make preview
+```
+
+Keep that terminal open while developing. After saving a Dart change, press
+`r` for hot reload, `R` for hot restart, or `q` to quit.
+
+The equivalent direct command remains:
+
+```sh
+flutter run -d linux
+```
+
 Mobile build verification requires the platform toolchains:
 
 ```sh
