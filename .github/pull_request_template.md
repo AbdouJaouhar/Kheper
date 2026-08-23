@@ -14,6 +14,7 @@ Describe the user-visible or operational result.
 - [ ] Offline/privacy impact considered
 - [ ] Content review/source status recorded when applicable
 - [ ] Dependency/license impact recorded when applicable
+- [ ] `make dependencies` passed when the dependency graph or policy changed
 
 ## Notes for maintainer
 
