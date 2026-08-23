@@ -118,7 +118,7 @@ class _FoundationPoint extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, semanticLabel: ''),
+          ExcludeSemantics(child: Icon(icon)),
           const SizedBox(width: 12),
           Expanded(child: Text(label)),
         ],
