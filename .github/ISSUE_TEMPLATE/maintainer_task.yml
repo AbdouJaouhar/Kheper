@@ -1,0 +1,59 @@
+name: Maintainer task
+description: Track an authorized Kheper delivery ticket during the maintainer-only phase.
+title: "[KHEPER-xxx] "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Kheper is currently maintainer-only. This form records already authorized work; it does not select a ticket or open external contribution intake.
+  - type: input
+    id: ticket
+    attributes:
+      label: Ticket
+      description: Use the existing authoritative key from MVP_BACKLOG.md.
+      placeholder: KHEPER-xxx
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: State the bounded learner, maintainer, reviewer, or operational outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance evidence
+      description: Name automated checks, manual checks, devices, fixtures, sources, and approvals.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and reviewers
+      description: Record predecessor tickets, inputs, responsible owner, and required reviewers.
+    validations:
+      required: true
+  - type: checkboxes
+    id: impacts
+    attributes:
+      label: Impact review
+      options:
+        - label: Accessibility impact is recorded or reasoned not applicable.
+          required: true
+        - label: Offline and privacy impact is recorded or reasoned not applicable.
+          required: true
+        - label: Data migration/rollback impact is recorded or reasoned not applicable.
+          required: true
+        - label: Content, source, approval, and licensing impact is recorded or reasoned not applicable.
+          required: true
+  - type: checkboxes
+    id: authorization
+    attributes:
+      label: Authorization
+      options:
+        - label: The maintainer selected this exact ticket in MVP_BACKLOG.md.
+          required: true
