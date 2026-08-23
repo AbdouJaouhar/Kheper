@@ -32,6 +32,7 @@ Security reports remain welcome through the private process in [SECURITY.md](SEC
 - Product specification: `docs/product-spec.md`
 - MVP scope register: `docs/mvp-scope.md`
 - MVP release-success scorecard: `docs/release-success-scorecard.md`
+- MVP milestones and dependency map: `docs/milestones-and-dependencies.md`
 - Delivery roles and RACI: `docs/delivery-roles.md`
 - Product charter: `docs/product-charter.md`
 - MVP backlog and versioned ticket status: `MVP_BACKLOG.md`
