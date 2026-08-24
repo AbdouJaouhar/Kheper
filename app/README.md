@@ -77,5 +77,15 @@ tolerances, feedback, localization, and manifests.
 
 The current test records are structural fixtures only. They contain no approved
 Egyptological claims, translations, drawing sequences, or redistributable
-third-party material. Full cross-record and scholarly publication validation is
-owned by KHEPER-046.
+third-party material and therefore do not represent approved course content.
+
+`lib/content/content_validator.dart` now provides the KHEPER-046 fail-closed
+validation pipeline. It checks catalogue uniqueness, Unicode scalars, safe
+paths, manifest inventory, typed references, construction sequences, answer
+policies and distractors, sources and approvals, localization/accessibility
+keys, every declared checksum, and the bundle signature. Production activation
+must stop whenever the returned result contains an issue.
+
+Cryptographic operations are injected through `BundleIntegrityVerifier`. This
+keeps trusted keys and the eventual maintained Ed25519/SHA-256 implementation
+outside imported content and avoids adding an unapproved production dependency.

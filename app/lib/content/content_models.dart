@@ -32,6 +32,8 @@ enum ExerciseKind {
   buildWord,
 }
 
+enum AnswerPolicy { single, multiple }
+
 enum BundleChannel { staging, production }
 
 enum SignatureAlgorithm { ed25519 }
@@ -203,11 +205,15 @@ final class LexemeRecord extends VersionedRecord {
     required this.transliteration,
     required this.glossKey,
     required this.sourceIds,
+    required this.reviewId,
+    required this.accessibilityKey,
   });
   final List<ContentId> glyphIds;
   final String transliteration;
   final ContentId glossKey;
   final List<ContentId> sourceIds;
+  final ContentId reviewId;
+  final ContentId accessibilityKey;
 
   factory LexemeRecord.fromJson(JsonMap json) => LexemeRecord(
     ContentId.parse(json['id'], prefix: 'lexeme'),
@@ -216,6 +222,11 @@ final class LexemeRecord extends VersionedRecord {
     transliteration: json['transliteration'] as String,
     glossKey: ContentId.parse(json['glossKey'], prefix: 'localization'),
     sourceIds: _ids(json['sourceIds']),
+    reviewId: ContentId.parse(json['reviewId'], prefix: 'review'),
+    accessibilityKey: ContentId.parse(
+      json['accessibilityKey'],
+      prefix: 'localization',
+    ),
   );
   @override
   JsonMap toJson() => {
@@ -224,6 +235,8 @@ final class LexemeRecord extends VersionedRecord {
     'transliteration': transliteration,
     'glossKey': glossKey.value,
     'sourceIds': sourceIds.map((id) => id.value).toList(),
+    'reviewId': reviewId.value,
+    'accessibilityKey': accessibilityKey.value,
   };
 }
 
@@ -235,11 +248,15 @@ final class ReadingRecord extends VersionedRecord {
     required this.direction,
     required this.translationKey,
     required this.sourceIds,
+    required this.reviewId,
+    required this.accessibilityKey,
   });
   final List<ContentId> glyphIds;
   final String direction;
   final ContentId translationKey;
   final List<ContentId> sourceIds;
+  final ContentId reviewId;
+  final ContentId accessibilityKey;
   factory ReadingRecord.fromJson(JsonMap json) => ReadingRecord(
     ContentId.parse(json['id'], prefix: 'reading'),
     json['version'] as String,
@@ -250,6 +267,11 @@ final class ReadingRecord extends VersionedRecord {
       prefix: 'localization',
     ),
     sourceIds: _ids(json['sourceIds']),
+    reviewId: ContentId.parse(json['reviewId'], prefix: 'review'),
+    accessibilityKey: ContentId.parse(
+      json['accessibilityKey'],
+      prefix: 'localization',
+    ),
   );
   @override
   JsonMap toJson() => {
@@ -258,6 +280,8 @@ final class ReadingRecord extends VersionedRecord {
     'direction': direction,
     'translationKey': translationKey.value,
     'sourceIds': sourceIds.map((id) => id.value).toList(),
+    'reviewId': reviewId.value,
+    'accessibilityKey': accessibilityKey.value,
   };
 }
 
@@ -268,19 +292,31 @@ final class ExerciseRecord extends VersionedRecord {
     required this.kind,
     required this.promptKey,
     required this.answerIds,
+    required this.distractorIds,
+    required this.answerPolicy,
     required this.masteryDimensions,
+    required this.accessibilityAlternativeKey,
   });
   final ExerciseKind kind;
   final ContentId promptKey;
   final List<ContentId> answerIds;
+  final List<ContentId> distractorIds;
+  final AnswerPolicy answerPolicy;
   final List<String> masteryDimensions;
+  final ContentId accessibilityAlternativeKey;
   factory ExerciseRecord.fromJson(JsonMap json) => ExerciseRecord(
     ContentId.parse(json['id'], prefix: 'exercise'),
     json['version'] as String,
     kind: ExerciseKind.values.byName(json['kind'] as String),
     promptKey: ContentId.parse(json['promptKey'], prefix: 'localization'),
     answerIds: _ids(json['answerIds']),
+    distractorIds: _ids(json['distractorIds']),
+    answerPolicy: AnswerPolicy.values.byName(json['answerPolicy'] as String),
     masteryDimensions: _strings(json['masteryDimensions']),
+    accessibilityAlternativeKey: ContentId.parse(
+      json['accessibilityAlternativeKey'],
+      prefix: 'localization',
+    ),
   );
   @override
   JsonMap toJson() => {
@@ -288,7 +324,10 @@ final class ExerciseRecord extends VersionedRecord {
     'kind': kind.name,
     'promptKey': promptKey.value,
     'answerIds': answerIds.map((id) => id.value).toList(),
+    'distractorIds': distractorIds.map((id) => id.value).toList(),
+    'answerPolicy': answerPolicy.name,
     'masteryDimensions': masteryDimensions,
+    'accessibilityAlternativeKey': accessibilityAlternativeKey.value,
   };
 }
 

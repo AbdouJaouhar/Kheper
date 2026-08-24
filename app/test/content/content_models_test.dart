@@ -46,6 +46,8 @@ void main() {
       'transliteration': 'fixture-only',
       'glossKey': 'localization.lexeme_gloss',
       'sourceIds': <String>[],
+      'reviewId': 'review.fixture',
+      'accessibilityKey': 'localization.lexeme_description',
     },
     {
       'type': 'reading',
@@ -55,6 +57,8 @@ void main() {
       'direction': 'rightToLeft',
       'translationKey': 'localization.reading_translation',
       'sourceIds': <String>[],
+      'reviewId': 'review.fixture',
+      'accessibilityKey': 'localization.reading_description',
     },
     {
       'type': 'exercise',
@@ -63,7 +67,10 @@ void main() {
       'kind': 'recognition',
       'promptKey': 'localization.exercise_prompt',
       'answerIds': <String>[],
+      'distractorIds': <String>[],
+      'answerPolicy': 'single',
       'masteryDimensions': <String>['recognition'],
+      'accessibilityAlternativeKey': 'localization.exercise_alternative',
     },
     {
       'type': 'source',

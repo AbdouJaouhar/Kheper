@@ -44,9 +44,12 @@ only then make the staged bundle active atomically. Failure leaves the current
 bundle untouched. Rollback targets must be compatible, previously validated,
 and different from the candidate itself.
 
-`ManifestContract.validateStructure()` implements only the first structural
-gate. Cryptographic verification, cross-record validation, and activation are
-owned by `KHEPER-046`, `KHEPER-052`, and `KHEPER-057` respectively.
+`ManifestContract.validateStructure()` implements the first structural gate.
+`ContentBundleValidator` implements the cross-record, checksum, approval, and
+signature gates through a trusted `BundleIntegrityVerifier`; any issue blocks
+the bundle. Bundle assembly and atomic activation remain owned by `KHEPER-052`
+and `KHEPER-057` respectively. The packaged course loader must supply the
+maintained SHA-256/Ed25519 adapter and application-owned trust keys.
 
 ## Examples
 
