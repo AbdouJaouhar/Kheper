@@ -32,6 +32,10 @@ enum ExerciseKind {
   buildWord,
 }
 
+enum BundleChannel { staging, production }
+
+enum SignatureAlgorithm { ed25519 }
+
 abstract interface class ContentRecord {
   ContentId get id;
   String get version;
@@ -491,6 +495,11 @@ final class ManifestRecord extends VersionedRecord {
     required this.recordIds,
     required this.assetIds,
     required this.checksums,
+    required this.approvalIds,
+    required this.channel,
+    required this.minimumAppVersion,
+    required this.signature,
+    this.maximumAppVersion,
     this.rollbackParentId,
   });
   final String schemaVersion;
@@ -498,6 +507,11 @@ final class ManifestRecord extends VersionedRecord {
   final List<ContentId> recordIds;
   final List<ContentId> assetIds;
   final Map<String, String> checksums;
+  final List<ContentId> approvalIds;
+  final BundleChannel channel;
+  final String minimumAppVersion;
+  final String? maximumAppVersion;
+  final BundleSignature signature;
   final ContentId? rollbackParentId;
   factory ManifestRecord.fromJson(JsonMap json) => ManifestRecord(
     ContentId.parse(json['id'], prefix: 'manifest'),
@@ -507,6 +521,11 @@ final class ManifestRecord extends VersionedRecord {
     recordIds: _ids(json['recordIds']),
     assetIds: _ids(json['assetIds']),
     checksums: _map(json['checksums']).cast<String, String>(),
+    approvalIds: _ids(json['approvalIds']),
+    channel: BundleChannel.values.byName(json['channel'] as String),
+    minimumAppVersion: json['minimumAppVersion'] as String,
+    maximumAppVersion: json['maximumAppVersion'] as String?,
+    signature: BundleSignature.fromJson(_map(json['signature'])),
     rollbackParentId: json['rollbackParentId'] == null
         ? null
         : ContentId.parse(json['rollbackParentId'], prefix: 'manifest'),
@@ -519,8 +538,115 @@ final class ManifestRecord extends VersionedRecord {
     'recordIds': recordIds.map((id) => id.value).toList(),
     'assetIds': assetIds.map((id) => id.value).toList(),
     'checksums': checksums,
+    'approvalIds': approvalIds.map((id) => id.value).toList(),
+    'channel': channel.name,
+    'minimumAppVersion': minimumAppVersion,
+    if (maximumAppVersion != null) 'maximumAppVersion': maximumAppVersion,
+    'signature': signature.toJson(),
     if (rollbackParentId != null) 'rollbackParentId': rollbackParentId!.value,
   };
+
+  /// Bytes covered by the detached signature. Object keys are sorted at every
+  /// level and the `signature` member itself is omitted.
+  String canonicalSigningPayload() =>
+      jsonEncode(_canonicalize({...toJson()..remove('signature')}));
+}
+
+final class BundleSignature {
+  const BundleSignature({
+    required this.algorithm,
+    required this.keyId,
+    required this.value,
+  });
+
+  final SignatureAlgorithm algorithm;
+  final String keyId;
+  final String value;
+
+  factory BundleSignature.fromJson(JsonMap json) => BundleSignature(
+    algorithm: SignatureAlgorithm.values.byName(json['algorithm'] as String),
+    keyId: json['keyId'] as String,
+    value: json['value'] as String,
+  );
+
+  JsonMap toJson() => {
+    'algorithm': algorithm.name,
+    'keyId': keyId,
+    'value': value,
+  };
+}
+
+/// Structural checks that run before any checksum or cryptographic operation.
+/// An empty result means only that the manifest shape is acceptable; it does
+/// not prove asset integrity, signer authenticity, or scholarly approval.
+final class ManifestContract {
+  const ManifestContract._();
+
+  static final RegExp _versionPattern = RegExp(
+    r'^[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?$',
+  );
+  static final RegExp _sha256Pattern = RegExp(r'^[0-9a-f]{64}$');
+
+  static List<String> validateStructure(ManifestRecord manifest) {
+    final issues = <String>[];
+    for (final entry in {
+      'record version': manifest.version,
+      'schema version': manifest.schemaVersion,
+      'curriculum version': manifest.curriculumVersion,
+      'minimum app version': manifest.minimumAppVersion,
+      if (manifest.maximumAppVersion != null)
+        'maximum app version': manifest.maximumAppVersion!,
+    }.entries) {
+      if (!_versionPattern.hasMatch(entry.value)) {
+        issues.add('${entry.key} is not a supported semantic version');
+      }
+    }
+    if (manifest.schemaVersion != contentSchemaVersion) {
+      issues.add('schema version is not supported by this application');
+    }
+    if (manifest.checksums.isEmpty) {
+      issues.add('at least one checksummed bundle file is required');
+    }
+    for (final entry in manifest.checksums.entries) {
+      if (entry.key.startsWith('/') || entry.key.contains('..')) {
+        issues.add('checksum path must stay relative: ${entry.key}');
+      }
+      if (!_sha256Pattern.hasMatch(entry.value)) {
+        issues.add('checksum must be lowercase SHA-256: ${entry.key}');
+      }
+    }
+    if (manifest.channel == BundleChannel.production &&
+        manifest.approvalIds.isEmpty) {
+      issues.add('production bundles require approval references');
+    }
+    if (manifest.rollbackParentId == manifest.id) {
+      issues.add('rollback parent cannot reference the same manifest');
+    }
+    try {
+      if (base64Decode(manifest.signature.value).length != 64) {
+        issues.add('Ed25519 signature must decode to 64 bytes');
+      }
+    } on FormatException {
+      issues.add('signature value must be valid base64');
+    }
+    try {
+      ContentId.parse(manifest.signature.keyId, prefix: 'key');
+    } on FormatException {
+      issues.add('signature key ID must be a stable key.* identifier');
+    }
+    return issues;
+  }
+}
+
+Object? _canonicalize(Object? value) {
+  if (value is Map<String, Object?>) {
+    final keys = value.keys.toList()..sort();
+    return <String, Object?>{
+      for (final key in keys) key: _canonicalize(value[key]),
+    };
+  }
+  if (value is List<Object?>) return value.map(_canonicalize).toList();
+  return value;
 }
 
 ContentRecord contentRecordFromJson(JsonMap json) => switch (json['type']) {
