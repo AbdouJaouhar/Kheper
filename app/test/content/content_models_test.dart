@@ -129,7 +129,18 @@ void main() {
       'curriculumVersion': '0.0.0-fixture',
       'recordIds': <String>[],
       'assetIds': <String>[],
-      'checksums': <String, String>{},
+      'checksums': <String, String>{
+        'records.json':
+            '0000000000000000000000000000000000000000000000000000000000000000',
+      },
+      'approvalIds': <String>[],
+      'channel': 'staging',
+      'minimumAppVersion': '1.0.0',
+      'signature': <String, String>{
+        'algorithm': 'ed25519',
+        'keyId': 'key.fixture',
+        'value': 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==',
+      },
     },
   ];
 
@@ -164,5 +175,46 @@ void main() {
       () => contentRecordFromJson({'type': 'unknown'}),
       throwsFormatException,
     );
+  });
+
+  test('valid staging manifest passes structural checks', () {
+    final manifest = ManifestRecord.fromJson(fixtures.last);
+    expect(ManifestContract.validateStructure(manifest), isEmpty);
+  });
+
+  test('production manifest fails closed without approvals', () {
+    final invalid = <String, Object?>{
+      ...fixtures.last,
+      'channel': 'production',
+      'checksums': <String, String>{'../escape': 'not-a-sha'},
+      'signature': <String, String>{
+        'algorithm': 'ed25519',
+        'keyId': 'invalid',
+        'value': 'not-base64',
+      },
+    };
+    final issues = ManifestContract.validateStructure(
+      ManifestRecord.fromJson(invalid),
+    );
+
+    expect(issues, contains('production bundles require approval references'));
+    expect(issues, contains('checksum path must stay relative: ../escape'));
+    expect(issues, contains('checksum must be lowercase SHA-256: ../escape'));
+    expect(issues, contains('signature value must be valid base64'));
+    expect(
+      issues,
+      contains('signature key ID must be a stable key.* identifier'),
+    );
+  });
+
+  test('canonical signing payload is stable and excludes signature bytes', () {
+    final first = ManifestRecord.fromJson(fixtures.last);
+    final reordered = Map<String, Object?>.fromEntries(
+      fixtures.last.entries.toList().reversed,
+    );
+    final second = ManifestRecord.fromJson(reordered);
+
+    expect(first.canonicalSigningPayload(), second.canonicalSigningPayload());
+    expect(first.canonicalSigningPayload(), isNot(contains('signature')));
   });
 }

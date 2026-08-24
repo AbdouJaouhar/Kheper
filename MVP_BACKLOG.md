@@ -64,6 +64,10 @@ independent schema/content versions. Structural fixtures contain no scholarly
 claims. The reviewed five-sign prototypes and the complete migration policy
 remain separate release gates and may still require compatible schema evolution.
 
+`KHEPER-045` narrows its `KHEPER-042` prerequisite in the same way: the bundle
+contract defines the compatibility fields and fail-closed rules it consumes,
+without claiming to complete the application-wide migration policy.
+
 ### Delivery phases
 
 | Phase | Indicative duration | Exit outcome |
@@ -203,7 +207,7 @@ Unless a ticket narrows the requirement, delivery work is done only when:
 | Key | Status | Type | Pri. | Summary | Acceptance criteria | Depends on |
 |---|---|---|---:|---|---|---|
 | KHEPER-044 | Done | Task | P0 | Define versioned content schemas | Typed schemas cover course, unit, lesson, glyph, lexeme, reading, exercise, source, asset, review, construction, tolerance, feedback, localization, and manifest records with stable IDs. | KHEPER-036 |
-| KHEPER-045 | Not started | Task | P0 | Define content-bundle manifest and signature contract | Schema/curriculum versions, checksums, assets, approvals, signature, channel, rollback parent, and compatibility are specified with valid and invalid examples. | KHEPER-042, KHEPER-044 |
+| KHEPER-045 | Done | Task | P0 | Define content-bundle manifest and signature contract | Schema/curriculum versions, checksums, assets, approvals, signature, channel, rollback parent, and compatibility are specified with valid and invalid examples. | KHEPER-044 |
 | KHEPER-046 | Not started | Task | P0 | Build automated content validation | Validation covers unique IDs/codes, Unicode, paths, accepted sequences, answers, distractors, references, sources, approvals, localization, accessibility alternatives, checksums, and signature; failures block production bundles. | KHEPER-044, KHEPER-045 |
 | KHEPER-047 | Not started | Task | P0 | Build structured authoring workflow | Authors can create/revise records with stable IDs, sources, changelog, confidence, and explicit review states; permissions enforce the editorial lifecycle. | KHEPER-014, KHEPER-044 |
 | KHEPER-048 | Not started | Task | P0 | Build vector and construction-profile editor | Authorized users can define normalized paths, segment groups, direction/timing, pen lifts, alternatives, anchors, topology, tolerance, and feedback regions with validation. | KHEPER-018, KHEPER-047 |
