@@ -219,6 +219,9 @@ Total: Approximately 40 lessons and 450-600 authored exercise instances generate
 
 ### 4.3 Linguistic and notation policy
 
+The operational draft and its specialist approval record are maintained in
+[linguistic-and-notation-policy.md](linguistic-and-notation-policy.md).
+
 | Topic | Required treatment |
 | --- | --- |
 | Transliteration | Use a documented Egyptological transliteration scheme. Provide a plain-keyboard fallback and explain symbols before assessment. |
