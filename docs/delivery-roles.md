@@ -1,6 +1,6 @@
 # Kheper delivery roles and RACI
 
-**Status:** Draft — pending maintainer approval
+**Status:** Approved by maintainer
 **Backlog ticket:** `KHEPER-004`
 **Operating model:** Maintainer-only with explicitly recorded role declarations.
 
@@ -72,4 +72,4 @@ same approved change.
 
 | Role | Decision | Status | Date |
 | --- | --- | --- | --- |
-| Repository maintainer | Approve the interim delivery-role and RACI model | Pending | — |
+| Repository maintainer | Approve maintainer specialist self-declaration rule | Approved | 25 August 2026 |
