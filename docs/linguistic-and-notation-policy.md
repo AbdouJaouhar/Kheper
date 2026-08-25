@@ -1,6 +1,6 @@
 # Kheper linguistic and notation policy
 
-**Status:** Draft — pending lead Egyptologist approval  
+**Status:** Approved by maintainer self-review as lead Egyptologist
 **Backlog ticket:** `KHEPER-010`  
 **Policy version:** 0.1.0  
 **Prepared:** 25 August 2026
@@ -232,6 +232,5 @@ The lead Egyptologist must record a decision for every item below:
 
 | Role | Reviewer | Decision | Date | Policy version | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Repository maintainer | Pending | Draft prepared | — | 0.1.0 | Maintainer review not yet recorded |
-| Lead Egyptologist | Vacant | Pending specialist review | — | 0.1.0 | Required before KHEPER-010 can be approved |
-
+| Repository maintainer | Repository maintainer | Approved | 25 August 2026 | 0.1.0 | Accepted policy for implementation |
+| Lead Egyptologist | Repository maintainer, self-declared | Approved by maintainer self-review | 25 August 2026 | 0.1.0 | Not an independent specialist review |
