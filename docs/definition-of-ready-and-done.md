@@ -42,7 +42,7 @@ each applicable question below.
 | Acceptance | Each criterion is observable or testable; manual evidence is named where automation is unsuitable. | Acceptance checklist or test reference |
 | Scope | Included behavior, exclusions, and any relationship to the MVP boundary are clear. | Ticket plus `mvp-scope.md` update if the boundary changes |
 | Dependencies | Predecessor tickets, designs, schemas, content, assets, toolchains, devices, and external appointments are available or explicitly staged. | Backlog dependency and linked inputs |
-| Ownership | Responsible discipline, accountable decision owner, required consultees, and reviewers match the RACI. | Ticket/review record; appointment record where required |
+| Ownership | Responsible discipline, accountable decision owner, required consultees, and reviewers match the RACI. | Ticket/review record; role record where required |
 | Scholarly claims | Linguistic, transliteration, pronunciation, historical, visual-form, and construction claims are sourced or explicitly draft-only. | Source/review plan and confidence state |
 | Rights | Any third-party source or asset has a plausible redistributable licence path; unknown rights are a blocker, not an assumption. | Provenance/licence record or planned audit reference |
 | Accessibility | Semantics, text scaling, contrast, reduced motion, touch targets, handedness, and equivalent non-drawing access are considered where affected. | Acceptance criteria or a reasoned not-applicable note |
@@ -105,7 +105,7 @@ follows adds evidence; it never removes the core requirements.
 | Local data or migration | Schema/version record, transactional and interruption fixtures, upgrade/downgrade or rollback behavior, backup/restore impact, and data-loss review | Maintainer / engineering and QA |
 | Backup, restore, import, reset, or content activation | Valid, corrupt, incompatible, interrupted, replace/merge, rollback, and explicit-confirmation cases as applicable | Maintainer / engineering, QA, privacy/security |
 | Dependency or build tooling | Necessity, version lock, maintenance/security status, licence, offline/privacy effect, reproducibility impact, and removal of unused alternatives | Maintainer; explicit approval before a production dependency is added |
-| Learner content or scholarly claim | Stable IDs, sources, provenance, confidence, accessibility text, rights, approval state, correction impact, and the required linguistic/calligraphic/instructional review | Appointed specialist reviewers; maintainer records approval |
+| Learner content or scholarly claim | Stable IDs, sources, provenance, confidence, accessibility text, rights, approval state, correction impact, and the required linguistic/calligraphic/instructional review | Recorded specialist reviewers; maintainer records the approval and review class |
 | Vector, construction, or scoring data | Deterministic fixtures, alternatives, anchors/topology/tolerances, explainable feedback, provenance, accessibility alternative, and calligraphy review | Appointed calligraphy reviewer plus other named specialists |
 | Privacy or security boundary | Permission/dependency inspection, threat and data-flow impact, zero-collection/zero-runtime-request evidence where applicable, failure handling, and no secret exposure | Maintainer / security and privacy review |
 | Release or gate decision | Exact app/content/scorer revisions, complete gate checklist, retained raw evidence, owners, known issues, rollback plan, artefact integrity, and formal decision | Roles named in the milestone map and scorecard; maintainer decides |
@@ -120,16 +120,18 @@ not weaken offline, privacy, accessibility, licensing, or scholarly gates.
 
 ## Review roles
 
-The current appointments and absence rules in `delivery-roles.md` are
-authoritative. Until a specialist is appointed, the maintainer may prepare and
-review drafts but cannot convert that review into specialist approval.
+The current role declarations and absence rules in `delivery-roles.md` are
+authoritative. A maintainer may self-declare a specialist role and approve a
+gate that requires that role, but the decision must be labelled maintainer
+self-review. It cannot satisfy a requirement for independent or multiple
+reviewers.
 
 | Decision | Responsible evidence producer | Required approver or recorder |
 | --- | --- | --- |
 | Ticket readiness, priority, scope, merge, and Done status | Maintainer or assigned implementer prepares the record | Repository maintainer |
 | Product and interaction behavior | Product/design owner | Repository maintainer; appointed accessibility/instructional reviewers at their gates |
 | Architecture, dependencies, data, build, and platform behavior | Application/device engineering | Repository maintainer; security/privacy and accessibility reviewers where affected |
-| Linguistic claims, translation, sources, and authentic examples | Appointed lead Egyptologist | Repository maintainer records the specialist approval |
+| Linguistic claims, translation, sources, and authentic examples | Recorded lead Egyptologist | Repository maintainer records the specialist approval and review class |
 | Monumental/Hieratic form, recommended construction sequence, alternatives, and drawing fixtures | Appointed calligraphy reviewer | Repository maintainer records the specialist approval |
 | Curriculum, remediation, mastery evidence, and assessment validity | Appointed instructional-design reviewer | Repository maintainer records the specialist approval |
 | Candidate quality, accessibility, privacy/security, and release evidence | QA and the relevant appointed reviewers | Repository maintainer records the gate decision |
@@ -202,6 +204,6 @@ approval. Until then, the affected ticket or gate is `Blocked`.
 | Role | Decision | Status | Date |
 | --- | --- | --- | --- |
 | Repository maintainer | Approve this DoR/DoD operating standard | Approved | 2026-08-23 |
-| Future lead Egyptologist | Confirm scholarly evidence and exception boundaries | Pending appointment | — |
+| Repository maintainer, self-declared lead Egyptologist | Confirm scholarly evidence and exception boundaries | Pending maintainer self-review | — |
 | Future calligraphy reviewer | Confirm construction/scoring evidence and exception boundaries | Pending appointment | — |
 | Future instructional-design reviewer | Confirm learning and assessment evidence and exception boundaries | Pending appointment | — |

@@ -97,7 +97,10 @@ The MVP is considered viable only when it meets the functional, privacy, accessi
 | Accessibility and device validation | Repository maintainer | Documented accessibility and device-matrix evidence before release |
 | Content release, asset licensing, and rollback | Repository maintainer | Release-editor checklist before activation or release |
 
-No draft prepared by an agent is scholarly approved merely because it is committed. The maintainer records approval and any later appointed specialist review in the relevant content and release records.
+No draft prepared by an agent is scholarly approved merely because it is
+committed. The maintainer records the reviewing role and whether the decision
+is maintainer self-review or independent specialist review. A self-review never
+satisfies a gate that explicitly requires independent or multiple reviewers.
 
 The interim staffing model and RACI are maintained in [delivery-roles.md](delivery-roles.md).
 
@@ -116,6 +119,6 @@ Changes to the product promise, privacy model, licensing, MVP boundary, supporte
 | --- | --- | --- | --- |
 | Repository maintainer / product sponsor | Ratify this product charter | Pending | — |
 | Repository maintainer / engineering lead | Confirm architecture and privacy constraints | Pending | — |
-| Future lead Egyptologist | Confirm scholarly approval gate | Pending appointment | — |
+| Repository maintainer, self-declared lead Egyptologist | Confirm scholarly approval gate | Active maintainer self-review; not independent | 25 August 2026 |
 | Future calligraphy reviewer | Confirm construction-review gate | Pending appointment | — |
 | Future instructional-design reviewer | Confirm assessment-review gate | Pending appointment | — |
